@@ -19,6 +19,7 @@ const product: Product = {
   name: "Wireless Headphones",
   price: 199.99,
   description: "Wireless headphones with noise cancellation.",
+  imageUrl: "/headphones.png",
   inStock: true
 };
 
