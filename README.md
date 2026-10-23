@@ -1,32 +1,42 @@
-# React + TypeScript + Vite
+# Lab 9.1 — Component Creation & Props
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Description
+This React TypeScript project creates reusable components for displaying alerts, user profiles, and product information.
 
-Currently, two official plugins are available:
+## Features
+1. AlertBox displays success, error, warning, and info messages.
+2. UserProfileCard displays user information with optional details.
+3. ProductDisplay shows product details and stock availability.
+4. Add to Cart updates cart count and displays a success alert.
+5. TypeScript interfaces define props, and automated tests check component behavior.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## How to Run
+```bash
+npm install
+npm run dev
+```
+Open the localhost link in your browser.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+Run tests:
+```bash
+npm run test
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Component Usage
+Components are imported into `App.tsx`. Props customize displayed information, and children allow additional content.
+
+## Reflection
+**1. How did you handle optional props?**  
+I used `?` in interfaces, default values, and conditional rendering.
+
+**2. What influenced your interface design?**  
+I focused on required information, optional features, and reusability.
+
+**3. How did you ensure type safety?**  
+I used TypeScript interfaces and checked for compilation errors.
+
+**4. What challenges came with composition?**  
+Passing props and connecting button events took practice. Testing helped verify functionality.
+
+## References
+React documentation, Vite documentation, and instructor examples.
